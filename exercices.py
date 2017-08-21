@@ -104,10 +104,17 @@
 
 #triangle
 
-for line in range(1, 4):
-	for space in range(3-line):
+for line in range(1, 18):
+	for space in range(17-line):
 		print(" ", end="")
 	for stars in range(2*line - 1):
+		print("*", end="")
+	print("\n")
+
+for line2 in range(1, 5):
+	for space in range(14):
+		print(" ", end="")
+	for stars2 in range(4):
 		print("*", end="")
 	print("\n")
 
