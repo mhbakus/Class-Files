@@ -103,14 +103,13 @@
 
 
 #triangle
-n = 1
+
 for line in range(1, 4):
 	for space in range(3-line):
-		print(" "),
-	for stars in range(n):
-		print("*"),
+		print(" ", end="")
+	for stars in range(2*line - 1):
+		print("*", end="")
 	print("\n")
-	n = n +2
 
 
 
@@ -127,12 +126,6 @@ for line in range(1, 4):
 
 
 
-
-
-
-	# for star in range(line+2):
-	# 	print("*"),
-	# print(" ")
 
 
 
