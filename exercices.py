@@ -173,27 +173,59 @@
 
 
 
-str = "learN python THe hArd way"
-strlower = str.lower()
-words = strlower.split(" ")
-newarr = []
-for word in words:
-	up = word[0].upper()
-	neword = word.replace(word[0], up)
-	newarr.append(neword)
+# str = "learN python THe hArd way"
+# strlower = str.lower()
+# words = strlower.split(" ")
+# newarr = []
+# for word in words:
+# 	up = word[0].upper()
+# 	neword = word.replace(word[0], up)
+# 	newarr.append(neword)
 
-newstr = " ".join(newarr)
-print(newstr)
-
-
+# newstr = " ".join(newarr)
+# print(newstr)
 
 
 
+# for line in range(1, 4):
+# 	for space in range(3-line):
+# 		print(" ", end="")
+# 	for stars in range(2*line - 1):
+# 		print("*", end="")
+# 	print(" ")
+# 	if line == 3:
+# 		new_line = line
+# 		while new_line > 0:
+# 			for space in range(3-new_line):
+# 				print(" ", end="")
+# 			for stars in range(2*new_line - 1):
+# 				print("*", end="")
+# 			print(" ")
+# 			new_line -= 1
+
+
+def diamond(ln):
+
+	for line in range(1, ln):
+		for space in range((ln-1)-line):
+			print(" ", end="")
+		for stars in range(2*line - 1):
+			print("*", end="")
+		print(" ")
+		if line == (ln-1):
+			new_line = line
+			while new_line > 0:
+				for space in range((ln)-new_line):
+					print(" ", end="")
+				for stars in range(2*new_line - 3):
+					print("*", end="")
+				print(" ")
+				new_line -= 1
 
 
 
 
-
+diamond(20)
 
 
 
