@@ -104,23 +104,23 @@
 
 #triangle
 
-for line in range(1, 10):
-	for space in range(9-line):
-		print(" ", end="")
-	for stars in range(2*line - 1):
-		print(" * ", end="")
-	print("\n")
+# for line in range(1, 10):
+# 	for space in range(9-line):
+# 		print(" ", end="")
+# 	for stars in range(2*line - 1):
+# 		print(" * ", end="")
+# 	print("\n")
 
-	if line == 9:
-		new_line = line
-		while new_line > 0:
-			for space in range(9-new_line):
-				print(" ", end="")
-			for stars in range(2*new_line - 1):
-				print(" * ", end="")
-			print("\n")
+# 	if line == 9:
+# 		new_line = line
+# 		while new_line > 0:
+# 			for space in range(9-new_line):
+# 				print(" ", end="")
+# 			for stars in range(2*new_line - 1):
+# 				print(" * ", end="")
+# 			print("\n")
 
-			new_line -= 1
+# 			new_line -= 1
 
 
 
@@ -134,12 +134,56 @@ for line in range(1, 10):
 # 	print("\n")
 
 
+# IS_BEAUTIFULL = True
+# name = "Andrew"
+# if IS_BEAUTIFULL and name == "Andrew":
+# 	print("hey, beautifull")
+# else:
+# 	print("Sorry SA")
 
 
 
+# print the number fron 11 to 53 that are even and divisible by 3
+
+
+# for number in range(11, 54):
+# 	if number % 2 == 0 and number % 3 == 0:
+# 		print("{} is even and divisible by 3".format(number))
+
+# nums = [1, 2, 3, 4, 5, 6, 7, 8, 3, -7, 0.5, 3]
+
+# length = len(nums)
+
+# #my way
+# i = 1
+# while i < length:
+# 	print(nums[i])
+# 	i += 2
+
+#eva way
+# for i in range(1, length, 2):
+# 	print(nums[i])
+
+#samuel way but not good solution
+# for i in nums:
+# 	if nums.index(i) % 2 == 0:
+# 		print("")
+# 	else:
+# 		print(i)
 
 
 
+str = "learN python THe hArd way"
+strlower = str.lower()
+words = strlower.split(" ")
+newarr = []
+for word in words:
+	up = word[0].upper()
+	neword = word.replace(word[0], up)
+	newarr.append(neword)
+
+newstr = " ".join(newarr)
+print(newstr)
 
 
 
