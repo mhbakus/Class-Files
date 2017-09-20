@@ -204,47 +204,122 @@
 # 			new_line -= 1
 
 
-def diamond(ln):
+# def diamond(ln):
 
-	for line in range(1, ln):
-		for space in range((ln-1)-line):
-			print(" ", end="")
-		for stars in range(2*line - 1):
-			print("*", end="")
-		print(" ")
-		if line == (ln-1):
-			new_line = line
-			while new_line > 0:
-				for space in range((ln)-new_line):
-					print(" ", end="")
-				for stars in range(2*new_line - 3):
-					print("*", end="")
-				print(" ")
-				new_line -= 1
-
-
-
-
-diamond(20)
+# 	for line in range(1, ln):
+# 		for space in range((ln-1)-line):
+# 			print(" ", end="")
+# 		for stars in range(2*line - 1):
+# 			print("*", end="")
+# 		print(" ")
+# 		if line == (ln-1):
+# 			new_line = line
+# 			while new_line > 0:
+# 				for space in range((ln)-new_line):
+# 					print(" ", end="")
+# 				for stars in range(2*new_line - 3):
+# 					print("*", end="")
+# 				print(" ")
+# 				new_line -= 1
 
 
 
 
+# diamond(20)
+
+# def diamond(hg):
+# 	if hg % 2 == 0:
+# 	else:
+# 		ln = (hg // 2) + 2
+
+# 	for line in range(1, ln):
+# 		for space in range((ln-1)-line):
+# 			print(" ", end="")
+# 		for stars in range(2*line - 1):
+# 			print("*", end="")
+# 		print(" ")
+# 		if line == (ln-1):
+# 			new_line = line
+# 			while new_line > 0:
+# 				for space in range((ln)-new_line):
+# 					print(" ", end="")
+# 				for stars in range(2*new_line - 3):
+# 					print("*", end="")
+# 				print(" ")
+# 				new_line -= 1
 
 
 
 
+# diamond(7)
+
+#solution on board
+
+# def diamon2(height):
+# 	if height % 2 == 0:
+# 		print("height must be odd")
+# 	else:
+# 		mdpoint = int(height/2) + 1
+# 		constant = (height * 2) + 1
+
+# 	for line in range(1, height):
+# 		if line <= mdpoint:
+# 			for space in range(mdpoint-line):
+# 				print(" ", end="")
+# 			for stars in range(2*line - 1):
+# 				print("*", end="")
+# 		else:
+# 			for space in range(line - mdpoint):
+# 				print(" ", end="")
+# 			for stars in range(constant - 2*line):
+# 				print("*", end="")
+# 		print(" ")
+
+# diamon2(5)
+
+
+#data type exercie 1
+# censored = {'the': 't-world', 'and': 'a-world', 'cows': 'c-world', 'barn': 'b-world'}
+# sentence = "The dogs and cows were at the barn"
+# words = sentence.lower().split(" ")
+
+# for w in range(len(words)):
+# 	for key, value in censored.items():
+# 		if key == words[w]:
+# 			words[w] = value
+
+# out = " ".join(words)
+# print(out)
+
+#rodgers solution
+# words = {'the': 't-world', 'and': 'a-world', 'cows': 'c-world', 'barn': 'b-world'}
+# input = "The dogs and cows were at the barn"
+# inputt = input.lower().split()
+
+# for index, val in enumerate(inputt):
+# 	if val in words:
+# 		inputt[index] = words[val]
+# output = " ".join(inputt)
+# print(output)
+
+#exercice 2
+cypher = { 'A': 'Q', 'M': 'T', 'L': 'S', 'E': 'Z', 'W': 'N', 'S': 'L', 'Q': 'A', 'N': 'W', 'Z': 'E', 'O': 'R', 'T': 'M', 'R': 'O' }
+
+sentence = "Nobody will ever guess what I'm saying"
+
+words = sentence.lower().split(" ")
+
+for key, value in enumerate(words):
+	for K, V in cypher.items():
+		k = K.lower()
+		v = V.lower()
+		for k in value:
+			new_value = value.replace(k, v)
+	print(new_value)
 
 
 
 
-
-
-
-
-
-
-			
 
 
 
