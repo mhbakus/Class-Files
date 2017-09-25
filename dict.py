@@ -1,11 +1,12 @@
-# mydict = {"sam": [6,4,8,5], "samuel(theotherone)": [4,5,1,3,8], "Tino": [7,8,5,5,6,]}
-
-# winning_nums = [6,4,8,5]
-
-# if winning_nums in mydict.values():
-# 	print("someone wins")
 import smtplib
 from email.message import EmailMessage
+from email.mime.multipart import MIMEMultipart
+from email.mime.text import MIMEText
+import __init__
+
+server = smtplib.SMTP('smtp.gmail.com', 587)
+server.starttls()
+server.login(os.environ['GMAIL'], os.environ['GMAIL_PASSWORD'])
 def add_contact():
 	name = input("please enter your name : ")
 	email = input("please enter your email : ")
@@ -19,24 +20,31 @@ def get_email(user_dict, name):
 		return "none"
 
 def send_mail(user_dict):
-	msg = EmailMessage()
 	for name, email in user_dict.items():
-		content = '''
-		Hello {}
-		Thank your for attending our event
-		here some details about the event
-		place : MEST
-		DJ : Dj ANDREW
-		dresscode : python PEP8
-		'''.format(name)
-		msg.set_content(content)
-		msg['Subject'] = 'Details about the hotest party'
-		msg['From'] = 'Dj Andrew'
+		if name == 'eyram':
+			content = '''
+			Hello {}
+			Sorry you're not allow to the party
+			'''.format(name)
+		else:
+			content = '''
+			Hello {}
+			Thank your for attending our event
+			here some details about the event
+			place : MEST
+			DJ : Dj ANDREW
+			dresscode : python PEP8
+			'''.format(name)	
+		
+		fromadress = "andrew@meltwater.org"
+		msg = MIMEMultipart()
+		msg['From'] = fromadress
 		msg['To'] = email
-
-		s = smtplib.SMTP('localhost')
-		s.send_message(msg)
-		s.quit()
+		msg['Subject'] = "Details about the hotest party of Accra"
+		body = content
+		msg.attach(MIMEText(body, 'plain'))
+		text = msg.as_string()
+		server.sendmail(fromadress, email, text)
 exit = False
 host = {}
 while not exit:
@@ -51,7 +59,7 @@ while not exit:
 	elif answer == "4":
 		exit = True
 	else:
-		raise Exception("error ")
+		raise Exception("error please enter a valid answer between 1, 2, 3, 4")
 
 		
 
