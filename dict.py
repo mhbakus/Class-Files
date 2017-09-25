@@ -1,12 +1,16 @@
 import smtplib
+import os
 from email.message import EmailMessage
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
 import __init__
 
+Username = os.environ['GMAIL']
+Password = os.environ['GMAIL_PASSWORD']
+print(Username, Password)
 server = smtplib.SMTP('smtp.gmail.com', 587)
 server.starttls()
-server.login(os.environ['GMAIL'], os.environ['GMAIL_PASSWORD'])
+server.login(Username, Password)
 def add_contact():
 	name = input("please enter your name : ")
 	email = input("please enter your email : ")
