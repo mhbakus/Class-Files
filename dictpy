@@ -1,0 +1,21 @@
+# mydict = {"sam": [6,4,8,5], "samuel(theotherone)": [4,5,1,3,8], "Tino": [7,8,5,5,6,]}
+
+# winning_nums = [6,4,8,5]
+
+# if winning_nums in mydict.values():
+# 	print("someone wins")
+
+host = {}
+name = input("please enter your name : ")
+email = input("please enter your email : ")
+host[name] = email
+print("thank you for registration")
+
+def get_email(name):
+	if name in host.keys():
+		return host[name]
+	else:
+		return "none"
+		
+print(get_email("mohamed"))
+
